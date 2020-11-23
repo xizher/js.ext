@@ -18,7 +18,7 @@ interface Date {
   getMonth (b?: boolean): Number
 }
 
-interface Array {
+interface Array<T> {
   /**
    * 在数组指定位置插入对象
    * @param index 位置索引
