@@ -49,10 +49,16 @@ interface Array<T> {
     many: boolean
   }) : void
   /**
+   * 数组去重
+   * @returns 范围唯一值数组
+   */
+  $unique () : void
+  
+  /**
    * 获得数组的唯一值
    * @returns 范围唯一值数组
    */
-  $unique () : Array<any>
+  $getUnique () : Array<any>
   /**
    * 判断数组是否相等（针对简单数组）
    * @param array 对比的目标数组
