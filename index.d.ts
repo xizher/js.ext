@@ -78,7 +78,7 @@ interface Array<T> {
    * @param propValue 指定属性值
    * @returns 目标对象数组，不存在空数组
    */
-  $findItems (propName: string, propValue: string | number | boolean): object
+  $findItems (propName: string, propValue: string | number | boolean): object[]
   /**
    * 输出对象数组中指定属性名的属性值数组（针对简单对象数组）
    * @param propName 属性名

@@ -1,4 +1,4 @@
-Date.prototype.format = function (fmt) {
+Date.prototype.$format = function (fmt) {
   let o = {
     'M+': this.getMonth() + 1, //月份
     'd+': this.getDate(), //日
@@ -21,13 +21,11 @@ Date.prototype.format = function (fmt) {
   return fmt
 }
 
-Date.prototype.getNextDate = function (day = 1) {
+Date.prototype.$getNextDate = function (day = 1) {
   return new Date(this.getTime() + 24 * 60 * 60 * 1000 * day)
 }
 
 const originalGetMonth = Date.prototype.getMonth
-Date.prototype.getMonth = function (b) {
-  return b
-    ? originalGetMonth.call(this) + 1
-    : originalGetMonth.call(this)
+Date.prototype.$getMonth = function () {
+  return originalGetMonth.call(this) + 1
 }

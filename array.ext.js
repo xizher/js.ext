@@ -97,5 +97,5 @@ Array.prototype.$min = function () {
 }
 
 Array.prototype.$ave = function () {
-  return this.sum() / this.length
+  return this.$sum() / this.length
 }

@@ -1,4 +1,4 @@
-Number.prototype.toChineseNum = function () {
+Number.prototype.$toChineseNum = function () {
   let num = this
   let changeNum = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九']
   let unit = ['', '十', '百', '千', '万']
@@ -17,18 +17,18 @@ Number.prototype.toChineseNum = function () {
   return overWan ? getWan(overWan) + '万' + getWan(noWan) : getWan(num)
 }
 
-Number.prototype.floor = function () {
+Number.prototype.$floor = function () {
   return Math.floor(this)
 }
 
-Number.prototype.ceil = function () {
+Number.prototype.$ceil = function () {
   return Math.ceil(this)
 }
 
-Number.prototype.abs = function () {
+Number.prototype.$abs = function () {
   return Math.abs(this)
 }
 
-Number.prototype.round = function (count) {
+Number.prototype.$round = function (count) {
   return Number(this.toFixed(count))
 }
