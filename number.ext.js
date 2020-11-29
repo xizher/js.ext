@@ -32,3 +32,7 @@ Number.prototype.$abs = function () {
 Number.prototype.$round = function (count) {
   return Number(this.toFixed(count))
 }
+
+Number.prototype.$toDateFormat = function (fmt) {
+  return new Date(this).$format(fmt)
+}

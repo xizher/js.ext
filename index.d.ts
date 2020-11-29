@@ -4,18 +4,18 @@ interface Date {
    * @param fmt 格式化字符串
    * @returns 日期格式化结果
    */
-  format (fmt: string) : string
+  $format (fmt: string) : string
   /**
    * 获得当前日期的前些天或后些天
    * @param day 日期天数间隔数，-1表示前一天，1表示后一天，默认为1
    * @returns 新日期
    */
-  getNextDate (day: number): Date
+  $getNextDate (day: number): Date
   /**
    * 获得月份
    * @param b 是否获得真实月份
    */
-  getMonth (b?: boolean): Number
+  $getMonth (): Number
 }
 
 interface Array<T> {
@@ -117,28 +117,33 @@ interface Number {
    * 获取中文数字
    * @returns 中文数字
    */
-  toChineseNum () : string
+  $toChineseNum () : string
   /**
    * 向下取整
    * @returns 向下取整结果
    */
-  floor () : number
+  $floor () : number
   /**
    * 向上取整
    * @returns 向上取整结果
    */
-  ceil () : number
+  $ceil () : number
   /**
    * 获得绝对值
    * @returns 绝对值结果
    */
-  abs () : number
+  $abs () : number
   /**
    * 获得保留数
    * @param count 保留的小数位
    * @returns 保留count位小数的数
    */
-  round (count: number) : number
+  $round (count: number) : number
+  /**
+   * 数字转日期格式化
+   * @param fmt 格式化字符串
+   */
+  $toDateFormat (fmt: string) : string
 }
 
 interface String {
@@ -147,18 +152,18 @@ interface String {
    * @param arr 字符串数组
    * @returns 判断结果
    */
-  contain (arr: string[]) : boolean
+  $contain (arr: string[]) : boolean
   /**
    * 清空字符串所有空格
    * @returns 清空所有空格后的字符串
    */
-  trimAll () : string
+  $trimAll () : string
   /**
    * 字符串替换（所有）
    * @param searchValue 被替换的字符串
    * @param replaceValue 替换字符串
    * @returns 替换后的字符串
    */
-  replaceAll (searchValue: string, replaceValue) : string
+  $replaceAll (searchValue: string, replaceValue) : string
 
 }
