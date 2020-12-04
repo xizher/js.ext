@@ -144,6 +144,12 @@ interface Number {
    * @param fmt 格式化字符串
    */
   $toDateFormat (fmt: string) : string
+
+  /**
+   * 数组转现金字符串
+   * @returns 格式化后的现金字符串
+   */
+  $toCashString () : string
 }
 
 interface String {

@@ -36,3 +36,7 @@ Number.prototype.$round = function (count) {
 Number.prototype.$toDateFormat = function (fmt) {
   return new Date(this).$format(fmt)
 }
+
+Number.prototype.$toCashString = function () {
+  return String(this).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+}
